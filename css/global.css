@@ -5,6 +5,7 @@
   --text-color: #000;
   --alt-text-color: #333;
   --accent-color: #51a3a3;
+  --site-max-width: 1100px;
 }
 
 body {

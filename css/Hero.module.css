@@ -1,7 +1,7 @@
 .heroContainer {
   display: flex;
   justify-content: space-between;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -42,6 +42,7 @@
   font-size: 1.2em;
   transition: all 0.3s ease;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .primaryButton:hover {
@@ -59,6 +60,7 @@
   font-size: 1.2em;
   transition: all 0.3s ease;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .secondaryButton:hover {
@@ -114,7 +116,7 @@
 }
 
 .heroImage img {
-  width: 420px;
+  max-width: 420px;
   height: auto;
   animation: floating 3s ease-in-out infinite;
 }
@@ -128,5 +130,20 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 1124) {
+  .heroImage {
+    display: none;
+  }
+  .heroContainer {
+    justify-content: center;
+  }
+  .subtitle {
+    text-align: center;
+  }
+  .buttonContainer {
+    justify-content: center;
   }
 }
