@@ -1,0 +1,132 @@
+.heroContainer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 40px;
+}
+
+.title {
+  font-size: 3.5em;
+  background: -webkit-linear-gradient(
+    var(--alt-text-color),
+    var(--accent-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1.3em;
+  font-weight: 300;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 2em;
+}
+
+.primaryButton {
+  padding: 15px 30px;
+  border-radius: 3em;
+  border: none;
+  background: #51a3a3;
+  color: #fff;
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.primaryButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(81, 163, 163, 0.4);
+  background: #468f8f;
+}
+
+.secondaryButton {
+  padding: 15px 30px;
+  border-radius: 3em;
+  color: #51a3a3;
+  background: #fff;
+  border: #51a3a3 3px solid;
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.secondaryButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(81, 163, 163, 0.4);
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 50px;
+  gap: 2.5em;
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 1em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem;
+  width: 150px;
+  height: 150px;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.statCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.statNumber {
+  color: #51a3a3;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.statName {
+  font-size: 1em;
+  line-height: 1.2;
+}
+
+.heroImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px;
+}
+
+.heroImage img {
+  width: 420px;
+  height: auto;
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
