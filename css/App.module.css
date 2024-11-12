@@ -1,0 +1,17 @@
+:root {
+  --background-color: #fff;
+  --text-color: #000;
+  --alt-text-color: #333;
+  --accent-color: #51a3a3;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: var(--background-color);
+  width: 100%;
+  height: 100%;
+}

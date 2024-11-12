@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --background-color: #fff;
+  --text-color: #000;
+  --alt-text-color: #333;
+  --accent-color: #51a3a3;
+}
+
+body {
+  background-color: var(--background-color);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
