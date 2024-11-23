@@ -133,19 +133,31 @@
   }
 }
 
-@keyframes floating2 {
+@keyframes floating_card {
   0% {
-    transform: translateY(-20px);
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes floating_card_2 {
+  0% {
+    transform: translateY(-10px);
   }
   50% {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-20px);
+    transform: translateY(-10px);
   }
 }
 
-@media (max-width: 1124) {
+@media (max-width: 1180px) {
   .heroImage {
     display: none;
   }
@@ -157,11 +169,20 @@
   }
   .buttonContainer {
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .primaryButton,
+  .secondaryButton {
+    width: 60%;
   }
   .statCard {
-    animation: floating 5s infinite;
+    animation: floating_card 3.5s infinite;
   }
   .statCard:nth-child(2) {
-    animation: floating2 5s infinite;
+    animation: floating_card_2 3.5s infinite;
   }
+}
+
+@media (max-width: 1054px) {
 }
