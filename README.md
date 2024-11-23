@@ -6,8 +6,9 @@ A club website written with actually decent code structure this time...
 - Fix animation for Team section upon scroll
 - Add footer
 - Add funtionality for interaction
+- Add ports to header / hero for mobile
 
-## Deploy: 
+## Deploy:
 ```
 https://networksaphyra.github.io/stem-club
 ```
