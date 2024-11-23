@@ -1,0 +1,146 @@
+.contentContainer {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.contentWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sectionTitle {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.sectionSubtitle {
+  font-size: 1.2em;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 60px;
+}
+
+.featureCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(81, 163, 163, 0.2);
+}
+
+.iconContainer {
+  background: rgba(81, 163, 163, 0.1);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  font-size: 2em;
+}
+
+.featureTitle {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.featureDescription {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+.calloutSection {
+  background: #51a3a3;
+  border-radius: 30px;
+  padding: 60px 40px;
+  margin-top: 80px;
+  text-align: center;
+  color: white;
+}
+
+.calloutContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.calloutTitle {
+  font-size: 2em;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.calloutText {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.calloutButton {
+  background: white;
+  color: #51a3a3;
+  padding: 15px 40px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.calloutButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .contentContainer {
+    padding: 60px 20px;
+  }
+
+  .featureGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .calloutSection {
+    padding: 40px 20px;
+    margin-top: 60px;
+  }
+
+  .sectionTitle {
+    font-size: 2em;
+  }
+
+  .calloutTitle {
+    font-size: 1.8em;
+  }
+}
