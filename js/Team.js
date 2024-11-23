@@ -5,14 +5,14 @@ const TEAM_MEMBERS = [
   {
     name: "Neev",
     title: "Co-Founder",
-    description: "Lorem ipsum",
+    description: "Chief Neev",
     emoji: "👨‍🔬",
     socials: [["Instagram", "https://github.com/networksaphyra"]],
   },
   {
     name: "Vedant",
     title: "Co-Founder",
-    description: "Lorem ipsum",
+    description: "The Immigrant",
     emoji: "👨‍🔬",
     socials: [["Instagram", "https://github.com/networksaphyra"]],
   },
