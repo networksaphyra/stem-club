@@ -1,15 +1,14 @@
 {
   "name": "chci-stem-club",
   "version": "1.0.0",
-  "main": "index.js",
+  "homepage": "https://networksaphyra.github.io/stem-club",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx parcel index.html --port 8000"
+    "start": "npx parcel index.html --port 8000",
+    "build": "parcel build index.html --dist-dir build --public-url /chci-stem-club/ --no-optimize",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "animate.css": "^4.1.1",
     "parcel": "^2.12.0",
@@ -17,6 +16,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "gh-pages": "^6.2.0",
     "process": "^0.11.10"
   }
 }
