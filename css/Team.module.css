@@ -1,0 +1,149 @@
+.teamSection {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.teamWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.teamHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.teamTitle {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.teamSubtitle {
+  font-size: 1.2em;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  padding: 20px;
+}
+
+.teamCard {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.teamCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(81, 163, 163, 0.2);
+}
+
+.memberEmoji {
+  font-size: 4em;
+  margin-bottom: 1rem;
+  background: rgba(81, 163, 163, 0.1);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.memberInfo {
+  text-align: center;
+}
+
+.memberName {
+  font-size: 1.5em;
+  color: #333;
+  margin: 10px 0 5px;
+  font-weight: 600;
+}
+
+.memberTitle {
+  color: #51a3a3;
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.memberDescription {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 1em;
+}
+
+.memberSocial {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.socialButton {
+  background: transparent;
+  border: 2px solid #51a3a3;
+  color: #51a3a3;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.socialButton:hover {
+  background: #51a3a3;
+  color: white;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .teamSection {
+    padding: 60px 20px;
+  }
+
+  .teamGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .teamTitle {
+    font-size: 2em;
+  }
+
+  .memberEmoji {
+    width: 80px;
+    height: 80px;
+    font-size: 3em;
+  }
+}
