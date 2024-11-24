@@ -43,8 +43,7 @@
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
-  animation: fadeInUp 0.5s ease forwards;
-  opacity: 0;
+  transform: translateY(20px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -114,17 +113,6 @@
 .socialButton:hover {
   background: #51a3a3;
   color: white;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @media (max-width: 768px) {

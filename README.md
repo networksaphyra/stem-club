@@ -3,7 +3,7 @@ A club website written with actually decent code structure this time...
 
 ## TODO:
 - Fix colors on header / hero
-- Fix animation for Team section upon scroll
+- ~~Fix animation for Team section upon scroll~~
 - Add footer
 - Add funtionality for interaction
 - ~~Port hero to mobile~~
