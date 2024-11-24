@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx parcel index.html --port 8000",
-    "build": "parcel build index.html --dist-dir build --public-url /chci-stem-club/ --no-optimize",
+    "build": "parcel build index.html --dist-dir build --public-url /stem-club/ --no-optimize",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
