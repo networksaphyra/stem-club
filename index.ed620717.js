@@ -8068,8 +8068,6 @@ var $538780980d505768$exports = {};
 $parcel$export($538780980d505768$exports, "buttonContainer", () => $538780980d505768$export$dc57ddd528b7443f, (v) => $538780980d505768$export$dc57ddd528b7443f = v);
 $parcel$export($538780980d505768$exports, "cardContainer", () => $538780980d505768$export$6b2d426110a11d7a, (v) => $538780980d505768$export$6b2d426110a11d7a = v);
 $parcel$export($538780980d505768$exports, "floating", () => $538780980d505768$export$489731e52ee942d6, (v) => $538780980d505768$export$489731e52ee942d6 = v);
-$parcel$export($538780980d505768$exports, "floating_card", () => $538780980d505768$export$fee76a40a9eaa5ce, (v) => $538780980d505768$export$fee76a40a9eaa5ce = v);
-$parcel$export($538780980d505768$exports, "floating_card_2", () => $538780980d505768$export$3559724d68a2e74b, (v) => $538780980d505768$export$3559724d68a2e74b = v);
 $parcel$export($538780980d505768$exports, "heroContainer", () => $538780980d505768$export$aacf3b5fc4b264ac, (v) => $538780980d505768$export$aacf3b5fc4b264ac = v);
 $parcel$export($538780980d505768$exports, "heroContent", () => $538780980d505768$export$eccf514abe5ef505, (v) => $538780980d505768$export$eccf514abe5ef505 = v);
 $parcel$export($538780980d505768$exports, "heroImage", () => $538780980d505768$export$d7c36e6b554306a0, (v) => $538780980d505768$export$d7c36e6b554306a0 = v);
@@ -8083,8 +8081,6 @@ $parcel$export($538780980d505768$exports, "title", () => $538780980d505768$expor
 var $538780980d505768$export$dc57ddd528b7443f;
 var $538780980d505768$export$6b2d426110a11d7a;
 var $538780980d505768$export$489731e52ee942d6;
-var $538780980d505768$export$fee76a40a9eaa5ce;
-var $538780980d505768$export$3559724d68a2e74b;
 var $538780980d505768$export$aacf3b5fc4b264ac;
 var $538780980d505768$export$eccf514abe5ef505;
 var $538780980d505768$export$d7c36e6b554306a0;
@@ -8099,10 +8095,6 @@ $538780980d505768$export$dc57ddd528b7443f = `N7mZ3G_buttonContainer`;
 $538780980d505768$export$6b2d426110a11d7a = `N7mZ3G_cardContainer`;
 $538780980d505768$export$489731e52ee942d6 = `N7mZ3G_floating`;
 $538780980d505768$export$489731e52ee942d6;
-$538780980d505768$export$fee76a40a9eaa5ce = `N7mZ3G_floating_card`;
-$538780980d505768$export$fee76a40a9eaa5ce;
-$538780980d505768$export$3559724d68a2e74b = `N7mZ3G_floating_card_2`;
-$538780980d505768$export$3559724d68a2e74b;
 $538780980d505768$export$aacf3b5fc4b264ac = `N7mZ3G_heroContainer`;
 $538780980d505768$export$eccf514abe5ef505 = `N7mZ3G_heroContent`;
 $538780980d505768$export$d7c36e6b554306a0 = `N7mZ3G_heroImage`;
@@ -8119,14 +8111,17 @@ $538780980d505768$export$fb184b623420d9be = `N7mZ3G_title`;
 
 const $2d2c6e63dc51be50$var$CARD_INFO = [
     {
+        id: 1,
         number: "100+",
         card_description: "Active Members"
     },
     {
+        id: 2,
         number: "100+",
         card_description: "Projects"
     },
     {
+        id: 3,
         number: "100+",
         card_description: "Events"
     }
@@ -8164,24 +8159,16 @@ const $2d2c6e63dc51be50$var$Hero = ()=>{
                         children: $2d2c6e63dc51be50$var$CARD_INFO.map((card)=>/*#__PURE__*/ (0, $17b288f07ec57b56$exports.jsxs)("div", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($538780980d505768$exports))).statCard,
                                 children: [
-                                    /*#__PURE__*/ (0, $17b288f07ec57b56$exports.jsxs)("div", {
+                                    /*#__PURE__*/ (0, $17b288f07ec57b56$exports.jsx)("div", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($538780980d505768$exports))).statNumber,
-                                        children: [
-                                            " ",
-                                            card.number,
-                                            " "
-                                        ]
+                                        children: card.number
                                     }),
-                                    /*#__PURE__*/ (0, $17b288f07ec57b56$exports.jsxs)("div", {
+                                    /*#__PURE__*/ (0, $17b288f07ec57b56$exports.jsx)("div", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($538780980d505768$exports))).statName,
-                                        children: [
-                                            " ",
-                                            card.card_description,
-                                            " "
-                                        ]
+                                        children: card.card_description
                                     })
                                 ]
-                            }))
+                            }, card.id))
                     })
                 ]
             }),
@@ -8189,7 +8176,7 @@ const $2d2c6e63dc51be50$var$Hero = ()=>{
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($538780980d505768$exports))).heroImage,
                 children: /*#__PURE__*/ (0, $17b288f07ec57b56$exports.jsx)("img", {
                     src: (0, (/*@__PURE__*/$parcel$interopDefault($2766cb2dc0488339$exports))),
-                    alt: "Logo"
+                    alt: "STEM Club Logo"
                 })
             })
         ]
@@ -8380,10 +8367,10 @@ var $d900fbb7d49b075e$export$2e2bcd8739ae039 = $d900fbb7d49b075e$var$Content;
 
 
 
-parcelRequire("d4J5n");
+
+var $d4J5n = parcelRequire("d4J5n");
 var $32130b9220b27ae7$exports = {};
 
-$parcel$export($32130b9220b27ae7$exports, "fadeInUp", () => $32130b9220b27ae7$export$546bb2e31f381a81, (v) => $32130b9220b27ae7$export$546bb2e31f381a81 = v);
 $parcel$export($32130b9220b27ae7$exports, "memberDescription", () => $32130b9220b27ae7$export$359cc6e0f33f7c87, (v) => $32130b9220b27ae7$export$359cc6e0f33f7c87 = v);
 $parcel$export($32130b9220b27ae7$exports, "memberEmoji", () => $32130b9220b27ae7$export$3958cabf77d19052, (v) => $32130b9220b27ae7$export$3958cabf77d19052 = v);
 $parcel$export($32130b9220b27ae7$exports, "memberInfo", () => $32130b9220b27ae7$export$a272d9e037c619cc, (v) => $32130b9220b27ae7$export$a272d9e037c619cc = v);
@@ -8398,7 +8385,6 @@ $parcel$export($32130b9220b27ae7$exports, "teamSection", () => $32130b9220b27ae7
 $parcel$export($32130b9220b27ae7$exports, "teamSubtitle", () => $32130b9220b27ae7$export$fe661dd34922874c, (v) => $32130b9220b27ae7$export$fe661dd34922874c = v);
 $parcel$export($32130b9220b27ae7$exports, "teamTitle", () => $32130b9220b27ae7$export$f1ea300f5bc512fd, (v) => $32130b9220b27ae7$export$f1ea300f5bc512fd = v);
 $parcel$export($32130b9220b27ae7$exports, "teamWrapper", () => $32130b9220b27ae7$export$3e645e1f73822fdd, (v) => $32130b9220b27ae7$export$3e645e1f73822fdd = v);
-var $32130b9220b27ae7$export$546bb2e31f381a81;
 var $32130b9220b27ae7$export$359cc6e0f33f7c87;
 var $32130b9220b27ae7$export$3958cabf77d19052;
 var $32130b9220b27ae7$export$a272d9e037c619cc;
@@ -8413,8 +8399,6 @@ var $32130b9220b27ae7$export$8c0096bc05aff537;
 var $32130b9220b27ae7$export$fe661dd34922874c;
 var $32130b9220b27ae7$export$f1ea300f5bc512fd;
 var $32130b9220b27ae7$export$3e645e1f73822fdd;
-$32130b9220b27ae7$export$546bb2e31f381a81 = `uBhuQa_fadeInUp`;
-$32130b9220b27ae7$export$546bb2e31f381a81;
 $32130b9220b27ae7$export$359cc6e0f33f7c87 = `uBhuQa_memberDescription`;
 $32130b9220b27ae7$export$3958cabf77d19052 = `uBhuQa_memberEmoji`;
 $32130b9220b27ae7$export$a272d9e037c619cc = `uBhuQa_memberInfo`;
@@ -8429,6 +8413,7 @@ $32130b9220b27ae7$export$8c0096bc05aff537 = `uBhuQa_teamSection`;
 $32130b9220b27ae7$export$fe661dd34922874c = `uBhuQa_teamSubtitle`;
 $32130b9220b27ae7$export$f1ea300f5bc512fd = `uBhuQa_teamTitle`;
 $32130b9220b27ae7$export$3e645e1f73822fdd = `uBhuQa_teamWrapper`;
+
 
 
 const $88709e961cd32e4e$var$TEAM_MEMBERS = [
@@ -8470,6 +8455,32 @@ const $88709e961cd32e4e$var$TEAM_MEMBERS = [
     }
 ];
 const $88709e961cd32e4e$var$Team = ()=>{
+    const sectionRef = (0, $d4J5n.useRef)(null);
+    const cardsRef = (0, $d4J5n.useRef)([]);
+    (0, $d4J5n.useEffect)(()=>{
+        const observer = new IntersectionObserver((entries)=>{
+            entries.forEach((entry)=>{
+                if (entry.isIntersecting) {
+                    if (entry.target === sectionRef.current) {
+                        entry.target.style.opacity = "1";
+                        entry.target.style.transform = "translateY(0)";
+                    } else {
+                        const index = cardsRef.current.indexOf(entry.target);
+                        entry.target.style.opacity = "1";
+                        entry.target.style.transform = "translateY(0)";
+                    }
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: "50px"
+        });
+        if (sectionRef.current) observer.observe(sectionRef.current);
+        cardsRef.current.forEach((card)=>{
+            if (card) observer.observe(card);
+        });
+        return ()=>observer.disconnect();
+    }, []);
     return /*#__PURE__*/ (0, $17b288f07ec57b56$exports.jsx)("section", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($32130b9220b27ae7$exports))).teamSection,
         id: "team",
@@ -8477,7 +8488,13 @@ const $88709e961cd32e4e$var$Team = ()=>{
             className: (0, (/*@__PURE__*/$parcel$interopDefault($32130b9220b27ae7$exports))).teamWrapper,
             children: [
                 /*#__PURE__*/ (0, $17b288f07ec57b56$exports.jsxs)("div", {
+                    ref: sectionRef,
                     className: (0, (/*@__PURE__*/$parcel$interopDefault($32130b9220b27ae7$exports))).teamHeader,
+                    style: {
+                        opacity: 0,
+                        transform: "translateY(20px)",
+                        transition: "opacity 0.6s ease-out, transform 0.6s ease-out"
+                    },
                     children: [
                         /*#__PURE__*/ (0, $17b288f07ec57b56$exports.jsx)("h2", {
                             className: (0, (/*@__PURE__*/$parcel$interopDefault($32130b9220b27ae7$exports))).teamTitle,
@@ -8492,9 +8509,12 @@ const $88709e961cd32e4e$var$Team = ()=>{
                 /*#__PURE__*/ (0, $17b288f07ec57b56$exports.jsx)("div", {
                     className: (0, (/*@__PURE__*/$parcel$interopDefault($32130b9220b27ae7$exports))).teamGrid,
                     children: $88709e961cd32e4e$var$TEAM_MEMBERS.map((member, index)=>/*#__PURE__*/ (0, $17b288f07ec57b56$exports.jsxs)("div", {
+                            ref: (el)=>cardsRef.current[index] = el,
                             className: (0, (/*@__PURE__*/$parcel$interopDefault($32130b9220b27ae7$exports))).teamCard,
                             style: {
-                                animationDelay: `${index * 0.2}s`
+                                opacity: 0,
+                                transform: "translateY(20px)",
+                                transition: `opacity 0.6s ease-out ${index * 0.2}s, transform 0.6s ease-out ${index * 0.2}s`
                             },
                             children: [
                                 /*#__PURE__*/ (0, $17b288f07ec57b56$exports.jsx)("div", {
@@ -8518,14 +8538,15 @@ const $88709e961cd32e4e$var$Team = ()=>{
                                         }),
                                         /*#__PURE__*/ (0, $17b288f07ec57b56$exports.jsx)("div", {
                                             className: (0, (/*@__PURE__*/$parcel$interopDefault($32130b9220b27ae7$exports))).memberSocial,
-                                            children: member.socials.map((social, index)=>/*#__PURE__*/ (0, $17b288f07ec57b56$exports.jsx)("a", {
+                                            children: member.socials.map((social)=>/*#__PURE__*/ (0, $17b288f07ec57b56$exports.jsx)("a", {
                                                     href: social[1],
                                                     target: "_blank",
+                                                    rel: "noopener noreferrer",
                                                     children: /*#__PURE__*/ (0, $17b288f07ec57b56$exports.jsx)("button", {
                                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($32130b9220b27ae7$exports))).socialButton,
                                                         children: social[0]
                                                     })
-                                                }))
+                                                }, social[0]))
                                         })
                                     ]
                                 })
@@ -8561,4 +8582,4 @@ $78f1c30269655c52$var$root.render(/*#__PURE__*/ (0, $17b288f07ec57b56$exports.js
 }));
 
 
-//# sourceMappingURL=index.b8ff43d9.js.map
+//# sourceMappingURL=index.ed620717.js.map
