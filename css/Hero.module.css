@@ -3,16 +3,20 @@
   justify-content: space-between;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 20px;
+  min-height: 80vh;
 }
 
 .heroContent {
   display: flex;
   flex-direction: column;
-  padding: 60px 40px;
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 600px;
 }
 
 .title {
-  font-size: 3.5em;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   background: -webkit-linear-gradient(
     var(--alt-text-color),
     var(--accent-color)
@@ -21,59 +25,64 @@
   -webkit-text-fill-color: transparent;
   font-weight: 700;
   margin: 0;
+  line-height: 1.2;
 }
 
 .subtitle {
-  font-size: 1.3em;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
   font-weight: 300;
+  margin: 1rem 0 2rem 0;
 }
 
 .buttonContainer {
   display: flex;
-  gap: 2em;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  width: 100%;
+  max-width: 600px;
 }
 
-.primaryButton {
-  padding: 15px 30px;
-  border-radius: 3em;
-  border: none;
-  background: #51a3a3;
-  color: #fff;
-  font-size: 1.2em;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.primaryButton:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(81, 163, 163, 0.4);
-  background: #468f8f;
-}
-
+.primaryButton,
 .secondaryButton {
   padding: 15px 30px;
   border-radius: 3em;
-  color: #51a3a3;
-  background: #fff;
-  border: #51a3a3 3px solid;
-  font-size: 1.2em;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   transition: all 0.3s ease;
   cursor: pointer;
   font-weight: 500;
+  min-width: 200px;
+  flex: 1;
+  width: 100%;
 }
 
+.primaryButton {
+  border: none;
+  background: #51a3a3;
+  color: #fff;
+}
+
+.secondaryButton {
+  color: #51a3a3;
+  background: #fff;
+  border: #51a3a3 3px solid;
+}
+
+.primaryButton:hover,
 .secondaryButton:hover {
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(81, 163, 163, 0.4);
 }
 
+.primaryButton:hover {
+  background: #468f8f;
+}
+
 .cardContainer {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 50px;
-  gap: 2.5em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  margin-top: 2rem;
 }
 
 .statCard {
@@ -84,9 +93,8 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0.5rem;
-  width: 150px;
-  height: 150px;
+  padding: 1rem;
+  aspect-ratio: 1;
   gap: 0.5rem;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -99,12 +107,12 @@
 
 .statNumber {
   color: #51a3a3;
-  font-size: 2.5em;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: bold;
 }
 
 .statName {
-  font-size: 1em;
+  font-size: clamp(0.8rem, 2vw, 1rem);
   line-height: 1.2;
 }
 
@@ -112,77 +120,80 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 0px;
+  padding: 20px;
 }
 
 .heroImage img {
-  max-width: 420px;
+  max-width: min(420px, 100%);
   height: auto;
   animation: floating 3s ease-in-out infinite;
 }
 
 @keyframes floating {
-  0% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
     transform: translateY(-20px);
   }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes floating_card {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-@keyframes floating_card_2 {
-  0% {
-    transform: translateY(-10px);
-  }
-  50% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-10px);
-  }
 }
 
 @media (max-width: 1180px) {
-  .heroImage {
-    display: none;
-  }
   .heroContainer {
-    justify-content: center;
-  }
-  .subtitle {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    padding: 10px;
   }
+
+  .heroContent {
+    padding: 20px 10px;
+    align-items: center;
+  }
+
   .buttonContainer {
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    max-width: 400px;
   }
-  .primaryButton,
-  .secondaryButton {
-    width: 60%;
+
+  .heroImage {
+    order: -1;
+    padding: 20px 0;
   }
-  .statCard {
-    animation: floating_card 3.5s infinite;
-  }
-  .statCard:nth-child(2) {
-    animation: floating_card_2 3.5s infinite;
+
+  .heroImage img {
+    max-width: min(300px, 80%);
   }
 }
 
-@media (max-width: 1054px) {
+@media (max-width: 768px) {
+  .buttonContainer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    min-width: unset;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardContainer {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .buttonContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    max-width: none;
+    width: 100%;
+  }
 }
