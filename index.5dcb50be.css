@@ -2619,6 +2619,42 @@
   }
 }
 
+a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.qrnGCG_footer {
+  color: #fff;
+  text-align: center;
+  background-color: #51a3a3;
+  padding: 2rem 0;
+}
+
+.qrnGCG_footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.qrnGCG_contactInfo {
+  margin-bottom: 1.5rem;
+}
+
+.qrnGCG_contactInfo h4 {
+  margin-bottom: .5rem;
+  font-size: 1.2rem;
+}
+
+.qrnGCG_contactInfo p {
+  margin: .25rem 0;
+}
+
+.qrnGCG_copyright {
+  border-top: 1px solid #fff3;
+  padding-top: 1.5rem;
+}
+
 :root {
   --background-color: #fff;
   --text-color: #000;
@@ -2652,4 +2688,4 @@ body {
   padding: 0;
   font-family: Raleway, sans-serif, Arial, Helvetica;
 }
-/*# sourceMappingURL=index.8eb25adb.css.map */
+/*# sourceMappingURL=index.5dcb50be.css.map */
