@@ -8,22 +8,22 @@ const TEAM_MEMBERS = [
     title: "Co-Founder",
     description: "Chief Neev",
     emoji: "👨‍🔬",
-    socials: [["Instagram", "https://github.com/networksaphyra"]],
+    socials: [["LinkedIn", "https://github.com/networksaphyra"]],
   },
   {
     name: "Vedant",
     title: "Co-Founder",
     description: "The Immigrant",
     emoji: "👨‍🔬",
-    socials: [["Instagram", "https://github.com/networksaphyra"]],
+    socials: [["LinkedIn", "https://github.com/networksaphyra"]],
   },
-  {
-    name: "MEEEEEEEEE",
-    title: "Developer",
-    description: "Cagnus Marlsen",
-    emoji: "👨🏻‍💻",
-    socials: [["Github", "https://github.com/networksaphyra"]],
-  },
+  // {
+  //   name: "MEEEEEEEEE",
+  //   title: "Developer",
+  //   description: "Cagnus Marlsen",
+  //   emoji: "👨🏻‍💻",
+  //   socials: [["Github", "https://github.com/networksaphyra"]],
+  // },
 ];
 
 const Team = () => {
