@@ -2,21 +2,14 @@
 .-RIq9W_header {
   background: #ffffffb3;
   border-radius: 4em;
-  flex: 1;
   justify-content: space-between;
   align-items: center;
   max-width: 1100px;
-  height: auto;
-  margin: 1em auto 0;
+  margin: 1em auto;
   padding: .2em 2em;
   transition: border-color .3s;
   display: flex;
-  overflow: hidden;
   box-shadow: 0 0 5px #0000004d;
-}
-
-.-RIq9W_header:hover {
-  border-color: #51a3a366;
 }
 
 .-RIq9W_logo img {
@@ -25,38 +18,43 @@
   transition: transform .3s;
 }
 
-.-RIq9W_nav {
-  width: 100%;
-  display: flex;
+.-RIq9W_navContainer {
+  flex-grow: 1;
 }
 
 .-RIq9W_navLinks {
-  flex-direction: row;
-  flex: 1;
   justify-content: center;
   align-items: center;
   gap: 4em;
-  width: 100%;
   font-family: Raleway, Arial, Helvetica, sans-serif;
   font-size: 1.1em;
-  font-weight: 400;
+  list-style: none;
   display: flex;
 }
 
-.-RIq9W_socialLinks {
-  flex: 0;
-  justify-content: flex-start;
-  gap: 1.2em;
-  width: 100%;
+.-RIq9W_rightSection {
+  align-items: center;
+  display: flex;
 }
 
-.-RIq9W_social_image {
+.-RIq9W_socialLinksContainer {
+  gap: 1.2em;
+  margin-right: 1em;
+  display: flex;
+}
+
+.-RIq9W_socialLink {
+  align-items: center;
+  display: flex;
+}
+
+.-RIq9W_socialImage {
   opacity: .85;
   width: 50px;
   transition: all .3s;
 }
 
-.-RIq9W_social_image:hover {
+.-RIq9W_socialImage:hover {
   opacity: 1;
   transform: scale(1.1);
 }
@@ -67,7 +65,6 @@
   text-decoration: none;
   transition: all .3s;
   display: inline-block;
-  position: relative;
 }
 
 .-RIq9W_link:hover {
@@ -75,8 +72,47 @@
   transform: scale(1.12);
 }
 
-ul {
+.-RIq9W_mobileMenuToggle {
+  display: none;
+}
+
+.-RIq9W_mobileMenu {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 100%;
+  padding: 2em;
+  display: flex;
+}
+
+.-RIq9W_mobileNavLinks {
+  text-align: center;
+  flex-direction: column;
+  gap: 1.5em;
+  margin-bottom: 2em;
   list-style: none;
+  display: flex;
+}
+
+.-RIq9W_mobileSocialLinks {
+  justify-content: center;
+  gap: 1.5em;
+  display: flex;
+}
+
+.-RIq9W_drawerPaper {
+  background-color: #ffffffe6;
+}
+
+@media (width <= 1024px) {
+  .-RIq9W_desktopNavLinks, .-RIq9W_desktopSocialLinks {
+    display: none;
+  }
+
+  .-RIq9W_mobileMenuToggle {
+    display: flex;
+  }
 }
 
 :root {
@@ -2616,4 +2652,4 @@ body {
   padding: 0;
   font-family: Raleway, sans-serif, Arial, Helvetica;
 }
-/*# sourceMappingURL=index.ee4ddd4b.css.map */
+/*# sourceMappingURL=index.8eb25adb.css.map */
