@@ -1,22 +1,14 @@
 .header {
   display: flex;
-  padding: 0.2em 2em;
-  justify-content: space-between;
   align-items: center;
-  height: auto;
-  margin: 0 auto;
+  justify-content: space-between;
+  padding: 0.2em 2em;
   max-width: 1100px;
+  margin: 1em auto;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 4em;
-  margin-top: 1em;
-  transition: border-color 0.3s ease;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-  flex: 1;
-}
-
-.header:hover {
-  border-color: rgba(81, 163, 163, 0.4);
+  transition: border-color 0.3s ease;
 }
 
 .logo img {
@@ -25,39 +17,43 @@
   transition: transform 0.3s ease;
 }
 
-.nav {
-  display: flex;
-  width: 100%;
+.navContainer {
+  flex-grow: 1;
 }
 
 .navLinks {
-  flex: 1;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
   gap: 4em;
-  font-size: 1.1em;
+  list-style: none;
   font-family: "Raleway", Arial, Helvetica, sans-serif;
-  font-weight: 400;
+  font-size: 1.1em;
 }
 
-.socialLinks {
-  flex: 0;
+.rightSection {
+  display: flex;
+  align-items: center;
+}
+
+.socialLinksContainer {
+  display: flex;
   gap: 1.2em;
-  flex-shrink: 1;
-  justify-content: flex-start;
-  width: 100%;
+  margin-right: 1em;
 }
 
-.social_image {
+.socialLink {
+  display: flex;
+  align-items: center;
+}
+
+.socialImage {
   width: 50px;
   opacity: 0.85;
   transition: all 0.3s ease;
 }
 
-.social_image:hover {
+.socialImage:hover {
   opacity: 1;
   transform: scale(1.1);
 }
@@ -66,7 +62,6 @@
   text-decoration: none;
   color: #333;
   transition: all 0.3s ease;
-  position: relative;
   display: inline-block;
   font-weight: 300;
 }
@@ -76,6 +71,46 @@
   transform: scale(1.12);
 }
 
-ul {
+.mobileMenuToggle {
+  display: none;
+}
+
+.mobileMenu {
+  width: 250px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+
+.mobileNavLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
   list-style: none;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.mobileSocialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+.drawerPaper {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 1024px) {
+  .desktopNavLinks,
+  .desktopSocialLinks {
+    display: none;
+  }
+
+  .mobileMenuToggle {
+    display: flex;
+  }
 }

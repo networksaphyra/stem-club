@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import { IconButton, Drawer } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import instagram from "../assets/instagram.png";
 import linkedin from "../assets/linkedin.png";
 import logo from "../assets/logo4.svg";
@@ -15,20 +18,24 @@ const NAV_LINKS = [
 
 const SOCIAL_LINKS = [
   { icon: instagram, href: "https://www.instagram.com", label: "Instagram" },
-  { icon: linkedin, href: "https://www.instagram.com", label: "Instagram" },
+  { icon: linkedin, href: "https://www.linkedin.com", label: "LinkedIn" },
 ];
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
   return (
     <header className={`${styles.header} animate__animated animate__fadeIn`}>
       <a
         href="#"
-        alt="Logo"
         className={`${styles.logo} animate__animated animate__bounceInLeft`}
       >
-        <img src={logo} className={styles.link} />
+        <img src={logo} className={styles.link} alt="Logo" />
       </a>
-      <nav className={styles.nav}>
+
+      <nav className={`${styles.navContainer} ${styles.desktopNavLinks}`}>
         <ul className={styles.navLinks}>
           {NAV_LINKS.map((nav_link, index) => (
             <li
@@ -36,36 +43,80 @@ const Header = () => {
               className="animate__animated animate__fadeInDown"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <a
-                href={nav_link.href}
-                alt={nav_link.label}
-                className={styles.link}
-              >
+              <a href={nav_link.href} className={styles.link}>
                 {nav_link.label}
               </a>
             </li>
           ))}
         </ul>
       </nav>
-      <nav className={`${styles.nav} ${styles.socialLinks}`}>
-        <ul className={`${styles.navLinks} ${styles.socialLinks}`}>
+
+      <div className={styles.rightSection}>
+        <div
+          className={`${styles.socialLinksContainer} ${styles.desktopSocialLinks}`}
+        >
           {SOCIAL_LINKS.map((social_link, index) => (
-            <li
+            <a
               key={social_link.label}
-              className="animate__animated animate__bounceInRight"
-              style={{ animationDelay: `${(index + 0.5) * 0.1}s` }}
+              href={social_link.href}
+              className={styles.socialLink}
             >
-              <a href={social_link.href}>
+              <img
+                src={social_link.icon}
+                alt={social_link.label}
+                className={`${styles.link} ${styles.socialImage}`}
+              />
+            </a>
+          ))}
+        </div>
+
+        <div className={styles.mobileMenuToggle}>
+          <IconButton onClick={toggleMenu} color="inherit" aria-label="menu">
+            {isOpen ? <CloseIcon /> : <MenuIcon />}
+          </IconButton>
+        </div>
+      </div>
+
+      <Drawer
+        anchor="right"
+        open={isOpen}
+        onClose={toggleMenu}
+        classes={{
+          paper: styles.drawerPaper,
+        }}
+      >
+        <div className={styles.mobileMenu}>
+          <ul className={styles.mobileNavLinks}>
+            {NAV_LINKS.map((nav_link) => (
+              <li key={nav_link.label} className={styles.mobileLinkItem}>
+                <a
+                  href={nav_link.href}
+                  className={styles.link}
+                  onClick={toggleMenu}
+                >
+                  {nav_link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <div className={styles.mobileSocialLinks}>
+            {SOCIAL_LINKS.map((social_link) => (
+              <a
+                key={social_link.label}
+                href={social_link.href}
+                className={styles.mobileSocialLink}
+              >
                 <img
                   src={social_link.icon}
                   alt={social_link.label}
-                  className={`${styles.link} ${styles.social_image}`}
+                  className={`${styles.link} ${styles.socialImage}`}
                 />
               </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+            ))}
+          </div>
+        </div>
+      </Drawer>
     </header>
   );
 };
