@@ -59,9 +59,9 @@ $7d39d93f9098a310$export$f7ad0328861e2f03 = $7d39d93f9098a310$var$resolve;
 
 });
 
-var $8906df596518bbb3$exports = {};
+var $f6960da35f04893f$exports = {};
 
-(parcelRequire("aKzDW")).register(new URL("", import.meta.url).toString(), JSON.parse('["Oy25l","index.3779ab34.js","hAaAA","instagram.f67e12e8.png","f9DvC","linkedin.ca5afae2.png","6mJC4","logo4.ad0c2f58.svg","1YlUi","index.5dcb50be.css"]'));
+(parcelRequire("aKzDW")).register(new URL("", import.meta.url).toString(), JSON.parse('["Oy25l","index.4f87cb1b.js","hAaAA","instagram.f67e12e8.png","f9DvC","linkedin.ca5afae2.png","6mJC4","logo4.ad0c2f58.svg","jQ02Q","neev.d1c8768a.jpg","1YlUi","index.0ab1c832.css"]'));
 
 
-//# sourceMappingURL=index.runtime.cd3a5083.js.map
+//# sourceMappingURL=index.runtime.372a9d21.js.map

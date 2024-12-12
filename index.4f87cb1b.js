@@ -18579,35 +18579,34 @@ $7e9bf918bfdb4f58$export$85c23482786b87cd = `-RIq9W_socialLinksContainer`;
 
 const $5e0448e08b97cf6d$var$NAV_LINKS = [
     {
+        href: "#",
+        label: "Home"
+    },
+    {
         href: "#about",
         label: "About"
     },
-    {
-        href: "#initiatives",
-        label: "Initiatives"
-    },
-    {
-        href: "#events",
-        label: "Events"
-    },
-    {
-        href: "#faq",
-        label: "FAQ"
-    },
+    // { href: "#initiatives", label: "Initiatives" },
+    // { href: "#events", label: "Events" },
+    // { href: "#faq", label: "FAQ" },
     {
         href: "#team",
         label: "Team"
+    },
+    {
+        href: "#footer",
+        label: "Contact"
     }
 ];
 const $5e0448e08b97cf6d$var$SOCIAL_LINKS = [
     {
         icon: (0, (/*@__PURE__*/$parcel$interopDefault($22f4a9580676e10c$exports))),
-        href: "https://www.instagram.com",
+        href: "https://www.instagram.com/direct/t/112983180098382/",
         label: "Instagram"
     },
     {
         icon: (0, (/*@__PURE__*/$parcel$interopDefault($8daff4d7aa7b563e$exports))),
-        href: "https://www.linkedin.com",
+        href: "https://www.linkedin.com/in/neev-shah-3a3a262a8/?originalSubdomain=ca",
         label: "LinkedIn"
     }
 ];
@@ -18779,6 +18778,12 @@ const $2d2c6e63dc51be50$var$CARD_INFO = [
     }
 ];
 const $2d2c6e63dc51be50$var$Hero = ()=>{
+    const scrollToSection = (sectionId)=>{
+        const section = document.getElementById(sectionId);
+        if (section) section.scrollIntoView({
+            behavior: "smooth"
+        });
+    };
     return /*#__PURE__*/ (0, $228IU.jsxs)("section", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($538780980d505768$exports))).heroContainer,
         children: [
@@ -18798,10 +18803,12 @@ const $2d2c6e63dc51be50$var$Hero = ()=>{
                         children: [
                             /*#__PURE__*/ (0, $228IU.jsx)("button", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($538780980d505768$exports))).primaryButton,
+                                onClick: ()=>scrollToSection("community"),
                                 children: "Join Us"
                             }),
                             /*#__PURE__*/ (0, $228IU.jsx)("button", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($538780980d505768$exports))).secondaryButton,
+                                onClick: ()=>scrollToSection("about"),
                                 children: "Learn More"
                             })
                         ]
@@ -18897,17 +18904,17 @@ $092e55e2cf785399$export$1a952fe22cdce89e = `sFQJsq_sectionTitle`;
 const $d900fbb7d49b075e$var$FEATURE_ITEMS = [
     {
         title: "Who We Are",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor arcu at libero venenatis egestas. Praesent ut ligula a dui eleifend dapibus. Sed tincidunt volutpat odio, quis pellentesque erat interdum. ",
+        description: "We are a passionate group of students dedicated to exploring and advancing the fields of Science, Technology, Engineering, and Mathematics (STEM). Our club brings together curious minds from diverse backgrounds to collaborate, innovate, and solve real-world problems.",
         icon: "\uD83D\uDC65"
     },
     {
         title: "Our Mission",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor arcu at libero venenatis egestas. Praesent ut ligula a dui eleifend dapibus. Sed tincidunt volutpat odio, quis pellentesque erat interdum. ",
+        description: "Our mission is to empower and inspire the next generation of innovators and problem-solvers by fostering a passion for STEM. We aim to create a supportive and inclusive environment where students can develop critical skills, work on meaningful projects, and explore the endless possibilities within STEM.",
         icon: "\uD83C\uDFAF"
     },
     {
         title: "Where We're Based",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor arcu at libero venenatis egestas. Praesent ut ligula a dui eleifend dapibus. Sed tincidunt volutpat odio, quis pellentesque erat interdum. ",
+        description: "We are based at Cameron Heights Collegiate Institute in Kitchener, Ontario. Our school provides the perfect environment for students to come together, share ideas, and explore their passions for STEM.",
         icon: "\uD83D\uDCCD"
     }
 ];
@@ -18999,15 +19006,16 @@ const $d900fbb7d49b075e$var$Content = ()=>{
                         children: [
                             /*#__PURE__*/ (0, $228IU.jsx)("h3", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($092e55e2cf785399$exports))).calloutTitle,
+                                id: "community",
                                 children: "Join Our Community"
                             }),
                             /*#__PURE__*/ (0, $228IU.jsx)("p", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($092e55e2cf785399$exports))).calloutText,
-                                children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor arcu at libero venenatis egestas. Praesent ut ligula a dui eleifend dapibus. Sed tincidunt volutpat odio, quis pellentesque erat interdum."
+                                children: "Become part of a collaborative network where curiosity thrives, ideas flourish, and together we shape the future of STEM."
                             }),
                             /*#__PURE__*/ (0, $228IU.jsx)("button", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($092e55e2cf785399$exports))).calloutButton,
-                                children: "Get Started Today"
+                                children: "Join"
                             })
                         ]
                     })
@@ -19027,6 +19035,7 @@ var $32130b9220b27ae7$exports = {};
 
 $parcel$export($32130b9220b27ae7$exports, "memberDescription", () => $32130b9220b27ae7$export$359cc6e0f33f7c87, (v) => $32130b9220b27ae7$export$359cc6e0f33f7c87 = v);
 $parcel$export($32130b9220b27ae7$exports, "memberEmoji", () => $32130b9220b27ae7$export$3958cabf77d19052, (v) => $32130b9220b27ae7$export$3958cabf77d19052 = v);
+$parcel$export($32130b9220b27ae7$exports, "memberImage", () => $32130b9220b27ae7$export$398c3c4072bbf52a, (v) => $32130b9220b27ae7$export$398c3c4072bbf52a = v);
 $parcel$export($32130b9220b27ae7$exports, "memberInfo", () => $32130b9220b27ae7$export$a272d9e037c619cc, (v) => $32130b9220b27ae7$export$a272d9e037c619cc = v);
 $parcel$export($32130b9220b27ae7$exports, "memberName", () => $32130b9220b27ae7$export$786bd636f08edc0a, (v) => $32130b9220b27ae7$export$786bd636f08edc0a = v);
 $parcel$export($32130b9220b27ae7$exports, "memberSocial", () => $32130b9220b27ae7$export$29ed25aa8477c9c8, (v) => $32130b9220b27ae7$export$29ed25aa8477c9c8 = v);
@@ -19041,6 +19050,7 @@ $parcel$export($32130b9220b27ae7$exports, "teamTitle", () => $32130b9220b27ae7$e
 $parcel$export($32130b9220b27ae7$exports, "teamWrapper", () => $32130b9220b27ae7$export$3e645e1f73822fdd, (v) => $32130b9220b27ae7$export$3e645e1f73822fdd = v);
 var $32130b9220b27ae7$export$359cc6e0f33f7c87;
 var $32130b9220b27ae7$export$3958cabf77d19052;
+var $32130b9220b27ae7$export$398c3c4072bbf52a;
 var $32130b9220b27ae7$export$a272d9e037c619cc;
 var $32130b9220b27ae7$export$786bd636f08edc0a;
 var $32130b9220b27ae7$export$29ed25aa8477c9c8;
@@ -19055,6 +19065,7 @@ var $32130b9220b27ae7$export$f1ea300f5bc512fd;
 var $32130b9220b27ae7$export$3e645e1f73822fdd;
 $32130b9220b27ae7$export$359cc6e0f33f7c87 = `uBhuQa_memberDescription`;
 $32130b9220b27ae7$export$3958cabf77d19052 = `uBhuQa_memberEmoji`;
+$32130b9220b27ae7$export$398c3c4072bbf52a = `uBhuQa_memberImage`;
 $32130b9220b27ae7$export$a272d9e037c619cc = `uBhuQa_memberInfo`;
 $32130b9220b27ae7$export$786bd636f08edc0a = `uBhuQa_memberName`;
 $32130b9220b27ae7$export$29ed25aa8477c9c8 = `uBhuQa_memberSocial`;
@@ -19069,17 +19080,21 @@ $32130b9220b27ae7$export$f1ea300f5bc512fd = `uBhuQa_teamTitle`;
 $32130b9220b27ae7$export$3e645e1f73822fdd = `uBhuQa_teamWrapper`;
 
 
+var $415e5e0475fde6f5$exports = {};
+$415e5e0475fde6f5$exports = new URL("neev.d1c8768a.jpg", import.meta.url).toString();
+
+
 
 const $88709e961cd32e4e$var$TEAM_MEMBERS = [
     {
         name: "Neev",
         title: "Co-Founder",
         description: "Chief Neev",
-        emoji: "\uD83D\uDC68\u200D\uD83D\uDD2C",
+        emoji: (0, (/*@__PURE__*/$parcel$interopDefault($415e5e0475fde6f5$exports))),
         socials: [
             [
                 "LinkedIn",
-                "https://github.com/networksaphyra"
+                "https://www.linkedin.com/in/neev-shah-3a3a262a8/?original_referer=&originalSubdomain=ca"
             ]
         ]
     },
@@ -19087,7 +19102,7 @@ const $88709e961cd32e4e$var$TEAM_MEMBERS = [
         name: "Vedant",
         title: "Co-Founder",
         description: "The Immigrant",
-        emoji: "\uD83D\uDC68\u200D\uD83D\uDD2C",
+        emoji: "hi",
         socials: [
             [
                 "LinkedIn",
@@ -19107,7 +19122,6 @@ const $88709e961cd32e4e$var$Team = ()=>{
                         entry.target.style.opacity = "1";
                         entry.target.style.transform = "translateY(0)";
                     } else {
-                        const index = cardsRef.current.indexOf(entry.target);
                         entry.target.style.opacity = "1";
                         entry.target.style.transform = "translateY(0)";
                     }
@@ -19161,7 +19175,11 @@ const $88709e961cd32e4e$var$Team = ()=>{
                             children: [
                                 /*#__PURE__*/ (0, $228IU.jsx)("div", {
                                     className: (0, (/*@__PURE__*/$parcel$interopDefault($32130b9220b27ae7$exports))).memberEmoji,
-                                    children: member.emoji
+                                    children: /*#__PURE__*/ (0, $228IU.jsx)("img", {
+                                        src: member.emoji,
+                                        alt: `${member.name} profile`,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($32130b9220b27ae7$exports))).memberImage
+                                    })
                                 }),
                                 /*#__PURE__*/ (0, $228IU.jsxs)("div", {
                                     className: (0, (/*@__PURE__*/$parcel$interopDefault($32130b9220b27ae7$exports))).memberInfo,
@@ -19225,6 +19243,7 @@ const $52561ba2338691a3$var$Footer = ()=>{
     const currentYear = new Date().getFullYear();
     return /*#__PURE__*/ (0, $228IU.jsx)("footer", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($63db598f930c2b9d$exports))).footer,
+        id: "footer",
         children: /*#__PURE__*/ (0, $228IU.jsxs)("div", {
             className: (0, (/*@__PURE__*/$parcel$interopDefault($63db598f930c2b9d$exports))).footerContent,
             children: [
@@ -19246,21 +19265,24 @@ const $52561ba2338691a3$var$Footer = ()=>{
                         }),
                         /*#__PURE__*/ (0, $228IU.jsxs)("p", {
                             children: [
-                                "Instagram: ",
+                                "Instagram:",
+                                " ",
                                 /*#__PURE__*/ (0, $228IU.jsx)("a", {
-                                    href: "https://www.instagram.com",
+                                    href: "https://www.instagram.com/chci_stem/",
                                     children: "@CHCI STEM"
                                 })
                             ]
                         })
                     ]
                 }),
-                /*#__PURE__*/ (0, $228IU.jsxs)("div", {
+                /*#__PURE__*/ (0, $228IU.jsx)("div", {
                     className: (0, (/*@__PURE__*/$parcel$interopDefault($63db598f930c2b9d$exports))).copyright,
-                    children: [
-                        "React \uD83D\uDCBB and coffee \u2615\uFE0F and procrastination \uD83D\uDD25",
-                        " "
-                    ]
+                    children: /*#__PURE__*/ (0, $228IU.jsx)("p", {
+                        children: /*#__PURE__*/ (0, $228IU.jsx)("a", {
+                            href: "https://www.github.com/networksaphyra",
+                            children: "Creator"
+                        })
+                    })
                 })
             ]
         })
@@ -19292,4 +19314,4 @@ $78f1c30269655c52$var$root.render(/*#__PURE__*/ (0, $228IU.jsx)((0, $d4J5n.Stric
 }));
 
 
-//# sourceMappingURL=index.3779ab34.js.map
+//# sourceMappingURL=index.4f87cb1b.js.map
