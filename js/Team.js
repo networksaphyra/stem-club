@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import styles from "../css/Team.module.css";
+import neev from "../assets/neev.jpg";
+// import vedant from "../assets/vedant.jpg";
 import "animate.css";
 
 const TEAM_MEMBERS = [
@@ -7,23 +9,21 @@ const TEAM_MEMBERS = [
     name: "Neev",
     title: "Co-Founder",
     description: "Chief Neev",
-    emoji: "👨‍🔬",
-    socials: [["LinkedIn", "https://github.com/networksaphyra"]],
+    emoji: neev,
+    socials: [
+      [
+        "LinkedIn",
+        "https://www.linkedin.com/in/neev-shah-3a3a262a8/?original_referer=&originalSubdomain=ca",
+      ],
+    ],
   },
   {
     name: "Vedant",
     title: "Co-Founder",
     description: "The Immigrant",
-    emoji: "👨‍🔬",
+    emoji: "hi",
     socials: [["LinkedIn", "https://github.com/networksaphyra"]],
   },
-  // {
-  //   name: "MEEEEEEEEE",
-  //   title: "Developer",
-  //   description: "Cagnus Marlsen",
-  //   emoji: "👨🏻‍💻",
-  //   socials: [["Github", "https://github.com/networksaphyra"]],
-  // },
 ];
 
 const Team = () => {
@@ -39,7 +39,6 @@ const Team = () => {
               entry.target.style.opacity = "1";
               entry.target.style.transform = "translateY(0)";
             } else {
-              const index = cardsRef.current.indexOf(entry.target);
               entry.target.style.opacity = "1";
               entry.target.style.transform = "translateY(0)";
             }
@@ -94,7 +93,13 @@ const Team = () => {
                 transition: `opacity 0.6s ease-out ${index * 0.2}s, transform 0.6s ease-out ${index * 0.2}s`,
               }}
             >
-              <div className={styles.memberEmoji}>{member.emoji}</div>
+              <div className={styles.memberEmoji}>
+                <img
+                  src={member.emoji}
+                  alt={`${member.name} profile`}
+                  className={styles.memberImage}
+                />
+              </div>
               <div className={styles.memberInfo}>
                 <h3 className={styles.memberName}>{member.name}</h3>
                 <span className={styles.memberTitle}>{member.title}</span>

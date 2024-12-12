@@ -6,19 +6,19 @@ const FEATURE_ITEMS = [
   {
     title: "Who We Are",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor arcu at libero venenatis egestas. Praesent ut ligula a dui eleifend dapibus. Sed tincidunt volutpat odio, quis pellentesque erat interdum. ",
+      "We are a passionate group of students dedicated to exploring and advancing the fields of Science, Technology, Engineering, and Mathematics (STEM). Our club brings together curious minds from diverse backgrounds to collaborate, innovate, and solve real-world problems.",
     icon: "👥",
   },
   {
     title: "Our Mission",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor arcu at libero venenatis egestas. Praesent ut ligula a dui eleifend dapibus. Sed tincidunt volutpat odio, quis pellentesque erat interdum. ",
+      "Our mission is to empower and inspire the next generation of innovators and problem-solvers by fostering a passion for STEM. We aim to create a supportive and inclusive environment where students can develop critical skills, work on meaningful projects, and explore the endless possibilities within STEM.",
     icon: "🎯",
   },
   {
     title: "Where We're Based",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor arcu at libero venenatis egestas. Praesent ut ligula a dui eleifend dapibus. Sed tincidunt volutpat odio, quis pellentesque erat interdum. ",
+      "We are based at Cameron Heights Collegiate Institute in Kitchener, Ontario. Our school provides the perfect environment for students to come together, share ideas, and explore their passions for STEM.",
     icon: "📍",
   },
 ];
@@ -95,14 +95,14 @@ const Content = () => {
 
         <div className={styles.calloutSection} style={{ opacity: 0 }}>
           <div className={styles.calloutContent}>
-            <h3 className={styles.calloutTitle}>Join Our Community</h3>
+            <h3 className={styles.calloutTitle} id="community">
+              Join Our Community
+            </h3>
             <p className={styles.calloutText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Pellentesque auctor arcu at libero venenatis egestas. Praesent ut
-              ligula a dui eleifend dapibus. Sed tincidunt volutpat odio, quis
-              pellentesque erat interdum.
+              Become part of a collaborative network where curiosity thrives,
+              ideas flourish, and together we shape the future of STEM.
             </p>
-            <button className={styles.calloutButton}>Get Started Today</button>
+            <button className={styles.calloutButton}>Join</button>
           </div>
         </div>
       </div>

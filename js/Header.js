@@ -9,16 +9,26 @@ import styles from "../css/Header.module.css";
 import "animate.css";
 
 const NAV_LINKS = [
+  { href: "#", label: "Home" },
   { href: "#about", label: "About" },
-  { href: "#initiatives", label: "Initiatives" },
-  { href: "#events", label: "Events" },
-  { href: "#faq", label: "FAQ" },
+  // { href: "#initiatives", label: "Initiatives" },
+  // { href: "#events", label: "Events" },
+  // { href: "#faq", label: "FAQ" },
   { href: "#team", label: "Team" },
+  { href: "#footer", label: "Contact" },
 ];
 
 const SOCIAL_LINKS = [
-  { icon: instagram, href: "https://www.instagram.com", label: "Instagram" },
-  { icon: linkedin, href: "https://www.linkedin.com", label: "LinkedIn" },
+  {
+    icon: instagram,
+    href: "https://www.instagram.com/direct/t/112983180098382/",
+    label: "Instagram",
+  },
+  {
+    icon: linkedin,
+    href: "https://www.linkedin.com/in/neev-shah-3a3a262a8/?originalSubdomain=ca",
+    label: "LinkedIn",
+  },
 ];
 
 const Header = () => {

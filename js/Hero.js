@@ -10,6 +10,13 @@ const CARD_INFO = [
 ];
 
 const Hero = () => {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className={styles.heroContainer}>
       <div className={styles.heroContent}>
@@ -18,8 +25,18 @@ const Hero = () => {
           Discover, learn, and create with like-minded peers.
         </p>
         <div className={styles.buttonContainer}>
-          <button className={styles.primaryButton}>Join Us</button>
-          <button className={styles.secondaryButton}>Learn More</button>
+          <button
+            className={styles.primaryButton}
+            onClick={() => scrollToSection("community")}
+          >
+            Join Us
+          </button>
+          <button
+            className={styles.secondaryButton}
+            onClick={() => scrollToSection("about")}
+          >
+            Learn More
+          </button>
         </div>
         <div className={styles.cardContainer}>
           {CARD_INFO.map((card) => (
